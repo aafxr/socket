@@ -1,0 +1,49 @@
+html, body {
+  background-color: #312e2e;
+}
+
+body{
+  min-height: 100vh;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: inherit; */
+}
+
+ul, ol,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#app{
+  margin: 0 auto;
+  padding: 8px 20px 0;
+  max-width: 1040px;
+}
+
+.message{
+  padding: 8px;
+  border-radius: 10px;
+  background-color: burlywood;
+}
+
+.user{
+  font-size: 0.7rem;
+  opacity: .8;
+}
+
+.text{
+
+}
+
+.self{
+  background-color: beige;
+}
+
+.hidden{
+  opacity: 0;
+}
