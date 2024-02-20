@@ -43,13 +43,6 @@ $ws_worker->onMessage = function ($connection, $data) use(&$users) {
         }
 
 
-
-
-
-        // if(isset($users[$data['user']])){
-        //     $users[$data['user']]->send($data['msg']);
-        // }
-
     }
 };
 

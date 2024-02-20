@@ -48,18 +48,18 @@ function sendMessage(socket, sender, receiver = 'all', msg = ''){
 
 function connect(addres, port, userID){
   return new Promise((resolve, reject) => {
-    const ws = new WebSocket(`ws://${addres}:${port}/?user=${userID}`)
+    const wst = new WebSocket(`ws://${addres}:${port}/?user=${userID}`)
 
-    ws.onerror = () => {
+    wst.onerror = () => {
       showAlert('Socket Connection failed')
       reject()
     }
 
-    ws.addEventListener('open', () => resolve(ws))
+    wst.addEventListener('open', () => resolve(wst))
 
-    ws.onclose = () => ws = undefined
+    wst.onclose = () => ws = undefined
 
-    ws.onmessage = (e) => {
+    wst.onmessage = (e) => {
       try{
         list.push(JSON.parse(e.data))
       }catch(e){
@@ -93,7 +93,7 @@ function addMessage(from, msg, self = false){
   messages.innerHTML += `
             <li class="list-item mt-2">
               <div class="message ${self ? 'self': ''}">
-                <div class="user">${from}</div>
+                <div class="user">from: ${from}</div>
                 <div class="message-text">${msg}</div>
               </div>
             </li>

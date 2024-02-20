@@ -1,0 +1,17 @@
+{
+    "name": "olennikovav/server",
+    "autoload": {
+        "psr-4": {
+            "Olennikovav\\Server\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aafxr",
+            "email": "alexandral.fed23@gmail.com"
+        }
+    ],
+    "require": {
+        "workerman/workerman": "^4.1"
+    }
+}
